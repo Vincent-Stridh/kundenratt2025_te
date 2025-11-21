@@ -40,25 +40,25 @@
 
 #v3 {
     margin: 5px;
-    background-image: url"../img/";
+    background-image: url("../img/Caffe-desk.png");
     background-repeat: no-repeat;
     background-size: cover;
     grid-area: v3;
     overflow: hidden;
     border-radius: 40px;
     border-style: solid;
-    border-color: #f6efe8;}
+    border-color: #f6efe8;
+}
 
 #v4 {
-    margin: 5px;
-    background-image: url"../img/";
-    background-repeat: no-repeat;
-    background-size: cover;
+    margin: 5px;    
     grid-area: v4;
     overflow: hidden;
     border-radius: 40px;
     border-style: solid;
-    border-color: #f6efe8;}
+    border-color: #f6efe8;
+    justify-content: center;
+}
 
 /* #v5 {
     margin: 5px;
@@ -73,7 +73,7 @@
 
 #v6 {
     margin: 5px;
-    background-image: url"../img/";
+    background-image: url("../img/bröd.png");
     background-repeat: no-repeat;
     background-size: cover;
     grid-area: v6;
@@ -84,7 +84,7 @@
 
 #v7 {
     margin: 5px;
-    background-image: url"../img/";
+    background-image: url("../img/bagels.png");
     background-repeat: no-repeat;
     background-size: cover;
     grid-area: v7;
@@ -96,7 +96,7 @@
 
 #v8 {
     margin: 5px;
-    background-image: url"../img/";
+    background-image: url("../img/");
     background-repeat: no-repeat;
     background-size: cover;
     grid-area: v8;
