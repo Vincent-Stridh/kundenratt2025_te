@@ -11,3 +11,11 @@
     "v5 v6 v7 v8";
 }
 
+#v1 {
+    margin: 5px;
+    background-image: url"../img/";
+    background-repeat: no-repeat;
+    background-size: cover;
+    grid-area: v1;
+    overflow: hidden;
+}
