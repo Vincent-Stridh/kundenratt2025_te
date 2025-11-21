@@ -19,3 +19,67 @@
     grid-area: v1;
     overflow: hidden;
 }
+
+#v2 {
+    margin: 5px;
+    background-image: url"../img/";
+    background-repeat: no-repeat;
+    background-size: cover;
+    grid-area: v2;
+    overflow: hidden;
+}
+
+#v3 {
+    margin: 5px;
+    background-image: url"../img/";
+    background-repeat: no-repeat;
+    background-size: cover;
+    grid-area: v3;
+    overflow: hidden;
+}
+
+#v4 {
+    margin: 5px;
+    background-image: url"../img/";
+    background-repeat: no-repeat;
+    background-size: cover;
+    grid-area: v4;
+    overflow: hidden;
+}
+
+#v5 {
+    margin: 5px;
+    background-image: url"../img/";
+    background-repeat: no-repeat;
+    background-size: cover;
+    grid-area: v5;
+    overflow: hidden;
+}
+
+#v6 {
+    margin: 5px;
+    background-image: url"../img/";
+    background-repeat: no-repeat;
+    background-size: cover;
+    grid-area: v6;
+    overflow: hidden;
+}
+
+#v7 {
+    margin: 5px;
+    background-image: url"../img/";
+    background-repeat: no-repeat;
+    background-size: cover;
+    grid-area: v7;
+    overflow: hidden;
+}
+
+#v8 {
+    margin: 5px;
+    background-image: url"../img/";
+    background-repeat: no-repeat;
+    background-size: cover;
+    grid-area: v8;
+    overflow: hidden;
+}
+
