@@ -82,7 +82,7 @@
     border-style: solid;
     border-color: #f6efe8;
 }
-/* hej */
+
 #v7 {
     margin: 5px;
     background-image: url("../img/bagels.png");
@@ -104,5 +104,6 @@
     overflow: hidden;
     border-radius: 40px;
     border-style: solid;
-    border-color: #f6efe8;}
+    border-color: #f6efe8;
+}
 
