@@ -1,32 +1,41 @@
 /* Denna fil skall innehålla din CSS kod */
 #wrapper {
     display: grid;
-    background-color: burlywood;
+    background-color: #b58b63;
     height: 100vh;
     width: 100%;
-    grid-template-columns: repeat(6, 1fr);
-    grid-template-rows: repeat(6, 1fr);
+    margin-top: 0;
+    margin-right: 0;
+    margin-left: 0;
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: repeat(4, 1fr);
     grid-template-areas: 
-    "v1 v2 v3 v4"
-    "v5 v6 v7 v8";
+    "v1 v2"
+    "v3 v4"
+    "v3 v6"
+    "v7 v8";
 }
 
 #v1 {
-    margin: 5px;
-    background-image: url"../img/";
-    background-repeat: no-repeat;
-    background-size: cover;
+/*    margin: 5px; */
     grid-area: v1;
     overflow: hidden;
+    border: solid;
+    border-color: #f6efe8;
+    text-align: center;
+    background-color: #a5b58d;
+    margin-top: 0;
 }
 
 #v2 {
-    margin: 5px;
-    background-image: url"../img/";
-    background-repeat: no-repeat;
-    background-size: cover;
+    /* margin: 5px; */    
     grid-area: v2;
     overflow: hidden;
+    border: solid;
+    border-color: #f6efe8;
+    text-align: center;
+    background-color: #a5b58d;
+    margin-top: 0;
 }
 
 #v3 {
@@ -36,7 +45,9 @@
     background-size: cover;
     grid-area: v3;
     overflow: hidden;
-}
+    border-radius: 40px;
+    border-style: solid;
+    border-color: #f6efe8;}
 
 #v4 {
     margin: 5px;
@@ -45,16 +56,20 @@
     background-size: cover;
     grid-area: v4;
     overflow: hidden;
-}
+    border-radius: 40px;
+    border-style: solid;
+    border-color: #f6efe8;}
 
-#v5 {
+/* #v5 {
     margin: 5px;
     background-image: url"../img/";
     background-repeat: no-repeat;
     background-size: cover;
     grid-area: v5;
     overflow: hidden;
-}
+    border-radius: 40px;
+    border-style: solid;
+    border-color: #f6efe8;} */
 
 #v6 {
     margin: 5px;
@@ -63,7 +78,9 @@
     background-size: cover;
     grid-area: v6;
     overflow: hidden;
-}
+    border-radius: 40px;
+    border-style: solid;
+    border-color: #f6efe8;}
 
 #v7 {
     margin: 5px;
@@ -72,6 +89,9 @@
     background-size: cover;
     grid-area: v7;
     overflow: hidden;
+    border-radius: 40px;
+    border-style: solid;
+    border-color: #f6efe8;
 }
 
 #v8 {
@@ -81,5 +101,7 @@
     background-size: cover;
     grid-area: v8;
     overflow: hidden;
-}
+    border-radius: 40px;
+    border-style: solid;
+    border-color: #f6efe8;}
 
