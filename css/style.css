@@ -73,7 +73,7 @@
 
 #v6 {
     margin: 5px;
-    background-image: url("../img/bröd.png");
+    background-image: url("../img/bröd2.png");
     background-repeat: no-repeat;
     background-size: cover;
     grid-area: v6;
@@ -81,6 +81,7 @@
     border-radius: 40px;
     border-style: solid;
     border-color: #f6efe8;
+    filter:grayscale(0.25);
 }
 
 #v7 {
@@ -93,11 +94,12 @@
     border-radius: 40px;
     border-style: solid;
     border-color: #f6efe8;
+    filter:grayscale(0.4);
 }
 
 #v8 {
     margin: 5px;
-/*    background-image: url("../img/"); */
+    background-image: url("../img/bröd1.png");
     background-repeat: no-repeat;
     background-size: cover;
     grid-area: v8;
@@ -105,5 +107,6 @@
     border-radius: 40px;
     border-style: solid;
     border-color: #f6efe8;
+    filter:grayscale(0.25);
 }
 
