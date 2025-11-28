@@ -2,7 +2,7 @@
 #wrapper {
     display: grid;
     background-color: #b58b63;
-    height: 100vh;
+    height: 98vh;
     width: 100%;
     margin-top: 0;
     margin-right: 0;
@@ -97,7 +97,7 @@
 
 #v8 {
     margin: 5px;
-    background-image: url("../img/");
+/*    background-image: url("../img/"); */
     background-repeat: no-repeat;
     background-size: cover;
     grid-area: v8;
