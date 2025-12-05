@@ -9,7 +9,7 @@
     margin-left: 0;
     margin: 0;
     grid-template-columns: repeat(2, 1fr);
-    grid-template-rows: repeat(5, 1fr);
+    grid-template-rows: 10% 10% 1fr 1fr 1fr;
     grid-template-areas: 
     "v1 v2"
     "v3 v4"
@@ -20,6 +20,7 @@
 
 #v1 {
 /*    margin: 5px; */
+    display: flex;
     grid-area: v1;
     overflow: hidden;
     border: solid;
@@ -27,12 +28,18 @@
     text-align: center;
     background-color: #a5b58d;
     margin-top: 0;
-    max-height: 25%;
     padding: 0%;
+    align-items: center;
+    justify-content: center;
+}
+
+#v11 {
+    padding: 0%
 }
 
 #v2 {
     /* margin: 5px; */    
+    display: flex;
     grid-area: v2;
     overflow: hidden;
     border: solid;
@@ -40,13 +47,18 @@
     text-align: center;
     background-color: #a5b58d;
     margin-top: 0;
-    max-height: 25%;
     padding: 0%;
+    align-items: center;
+    justify-content: center;
+}
+
+#v21 {
+    padding: 0%
 }
 
 #v3 {
     margin: 5px;
-    background-image: url("../img/Caffe-desk.png");
+    background-image: url("../img/Caffe-desk.jpg");
     background-repeat: no-repeat;
     background-size: cover;
     grid-area: v3;
@@ -74,8 +86,7 @@
 }
 
 #v41 {
-    padding: 0%;
-    
+    padding: 0%
 }
 
 /* #v5 {
@@ -105,7 +116,7 @@
 
 #v7 {
     margin: 5px;
-    background-image: url("../img/bagels.png");
+    background-image: url("../img/bagels.jpg");
     background-repeat: no-repeat;
     background-size: cover;
     grid-area: v7;
@@ -130,3 +141,52 @@
     filter:grayscale(0.25);
 }
 */
+
+/*css till meny här under*/
+
+.meny {
+    display: flex;
+    background-color: #a5b58d;
+    height: 98vh;
+    width: 100%;
+    margin: 0px;
+    overflow-x: auto;
+    scroll-snap-type: x mandatory;
+    scroll-behavior: smooth;
+    gap: 1rem;
+    padding: 1rem;
+}
+
+.meny::-webkit-scrollbar {
+    display: none
+}
+.card:hover {
+    transform: scale(1.2) rotate(1deg);
+    z-index: 10;
+}
+
+.card {
+    min-width: 200px;
+    height: 80%;
+    background: #b58b63;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    scroll-snap-align: start;
+    margin: 5px;
+    background-repeat: no-repeat;
+    background-size: cover;
+    transition: transform 0.3s ease;
+    border: 2px solid #f6efe8;
+}
+
+#m1 { background-image: url("/img/img1.png"); }
+#m2 { background-image: url("/img/img2.png"); }
+#m3 { background-image: url("/img/img3.png"); }
+#m4 { background-image: url("/img/img4.png"); }
+#m5 { background-image: url("/img/img5.png"); }
+#m6 { background-image: url("/img/img6.png"); }
+#m7 { background-image: url("/img/img7.png"); }
+#m8 { background-image: url("/img/img8.png"); }
+#m9 { background-image: url("/img/img9.png"); }
+#m10 { background-image: url("/img/img10.png"); }
