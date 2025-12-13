@@ -1,8 +1,8 @@
 /* Denna fil skall innehålla din CSS kod */
-#wrapper {
+#landingpage-wrapper {
     display: grid;
     background-color: #b58b63;
-    height: 98vh;
+    height: 90vh;
     width: 100%;
     margin-top: 0;
     margin-right: 0;
@@ -11,17 +11,17 @@
     grid-template-columns: repeat(2, 1fr);
     grid-template-rows: 10% 10% 1fr 1fr 1fr;
     grid-template-areas: 
-    "v1 v2"
+    "m v2"
     "v3 v4"
     "v3 v6"
     "v3 v6"
     "v7 v6";
 }
 
-#v1 {
+#meny {
 /*    margin: 5px; */
     display: flex;
-    grid-area: v1;
+    grid-area: m;
     overflow: hidden;
     border: solid;
     border-color: #f6efe8;
@@ -33,12 +33,7 @@
     justify-content: center;
 }
 
-#v11 {
-    padding: 0%
-}
-
-#v2 {
-    /* margin: 5px; */    
+#about_us {
     display: flex;
     grid-area: v2;
     overflow: hidden;
@@ -52,13 +47,9 @@
     justify-content: center;
 }
 
-#v21 {
-    padding: 0%
-}
-
 #v3 {
     margin: 5px;
-    background-image: url("../img/Caffe-desk.jpg");
+    background-image: url("../img/coffee-shop-desk.jpg");
     background-repeat: no-repeat;
     background-size: cover;
     grid-area: v3;
@@ -98,11 +89,12 @@
     overflow: hidden;
     border-radius: 40px;
     border-style: solid;
-    border-color: #f6efe8;} */
+    border-color: #f6efe8;
+} */
 
 #v6 {
     margin: 5px;
-    background-image: url("../img/bröd2_small.jpg");
+    background-image: url("../img/breadloaf.jpg");
     background-repeat: no-repeat;
     background-size: cover;
     grid-area: v6;
@@ -143,26 +135,34 @@
 */
 
 /*css till meny här under*/
-
-.meny {
-    display: flex;
+.menywrapper {
+    display: grid;
     background-color: #a5b58d;
     height: 98vh;
     width: 100%;
     margin: 0px;
     overflow-x: auto;
-    scroll-snap-type: x mandatory;
-    scroll-behavior: smooth;
     gap: 1rem;
     padding: 1rem;
+    text-decoration: transparent;
+    grid-template-columns: 1fr;
+    grid-template-rows: 1fr 1fr;
+    grid-template-areas: 
+    "1"
+    "2";
 }
 
-.meny::-webkit-scrollbar {
-    display: none
+.menyöver {
+    display: flex;
+    justify-content: space-evenly;
+    flex-basis: auto;
+    grid-area: 1;
 }
+
 .card:hover {
-    transform: scale(1.2) rotate(1deg);
+    transform: scale(1.1);
     z-index: 10;
+    text-transform: none;
 }
 
 .card {
@@ -180,13 +180,40 @@
     border: 2px solid #f6efe8;
 }
 
-#m1 { background-image: url("/img/img1.png"); }
-#m2 { background-image: url("/img/img2.png"); }
-#m3 { background-image: url("/img/img3.png"); }
-#m4 { background-image: url("/img/img4.png"); }
-#m5 { background-image: url("/img/img5.png"); }
-#m6 { background-image: url("/img/img6.png"); }
-#m7 { background-image: url("/img/img7.png"); }
-#m8 { background-image: url("/img/img8.png"); }
-#m9 { background-image: url("/img/img9.png"); }
-#m10 { background-image: url("/img/img10.png"); }
+.card-text {
+    opacity: 0;
+    transition: opacity 0.3s ease;
+    color: #f6efe8;
+    font-size: 1.3rem;
+    text-shadow: 0 2px 6px rgba(0,0,0,0.6);
+}
+
+.card:hover .card-text {
+    opacity: 1;
+}
+
+#m1 { 
+    background-image: url("/img/our\ vision.jpg"); 
+    flex-grow: 1;
+    color: #f6efe8;
+    font-size: 1.3rem;
+    max-width: 20%;
+    text-shadow: 0 2px 6px rgba(0,0,0,0.6);
+}
+
+#m2 { background-image: url("/img/västerbottenpaj.jpg"); flex-grow: 1;}
+#m3 { background-image: url("/img/lemonade.jpg"); flex-grow: 1;}
+#m4 { background-image: url("/img/vegan_alternative.jpg"); flex-grow: 1;}
+#m5 { background-image: url("/img/vegan_bowl.jpg"); flex-grow: 1;}
+
+.menyunder {
+    display: flex;
+    justify-content: space-evenly;
+    flex-basis: auto;
+    grid-area: 2;
+}
+#m6 { background-image: url("/img/cupcake.jpg"); flex-grow: 1;}
+#m7 { background-image: url("/img/tiramisu.jpg"); flex-grow: 1;}
+#m8 { background-image: url("/img/toast.jpg"); flex-grow: 1;}
+#m9 { background-image: url("/img/coffee.jpg"); flex-grow: 1;}
+#m10 { background-image: url("/img/vegan_cake.jpg" ); flex-grow: 1;}
