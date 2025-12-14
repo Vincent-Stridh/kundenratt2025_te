@@ -18,138 +18,65 @@
     "v7 v6";
 }
 
-#meny {
-/*    margin: 5px; */
-    display: flex;
-    grid-area: m;
-    overflow: hidden;
-    border: solid;
-    border-color: #f6efe8;
-    text-align: center;
-    background-color: #a5b58d;
-    margin-top: 0;
-    padding: 0%;
-    align-items: center;
-    justify-content: center;
-}
-
-#about_us {
-    display: flex;
-    grid-area: v2;
-    overflow: hidden;
-    border: solid;
-    border-color: #f6efe8;
-    text-align: center;
-    background-color: #a5b58d;
-    margin-top: 0;
-    padding: 0%;
-    align-items: center;
-    justify-content: center;
-}
-
-#v3 {
+.panel {
     margin: 5px;
-    background-image: url("../img/coffee-shop-desk.jpg");
-    background-repeat: no-repeat;
-    background-size: cover;
-    grid-area: v3;
     overflow: hidden;
     border-radius: 40px;
-    border-style: solid;
-    border-color: #f6efe8;
-    margin-left: 0px;
-    padding: 0%;
+    border: solid #f6efe8;
+    padding: 0;
+    background-repeat: no-repeat;
+    background-size: cover;
+    filter: grayscale(0.3);
+}
+
+.topbox {
+    display: flex;
+    overflow: hidden;
+    border: solid #f6efe8;
+    text-align: center;
+    background-color: #a5b58d;
+    padding: 0;
+    align-items: center;
+    justify-content: center;
+}
+
+#meny {grid-area: m}
+#about_us {grid-area: v2}
+
+#v3 {background-image: url("../img/coffee-shop-desk.jpg"); grid-area: v3;
 }
 
 #v4 {
-    display:flex;
-    margin: 5px;    
+    display:flex;  
     grid-area: v4;
-    overflow: hidden;
-    border-radius: 40px;
-    border-style: solid;
-    border-color: #f6efe8;
     justify-content: center;
     text-align: center;
-    padding: 0%;
     background-color: #a5b58d;
     align-items: center;
 }
+#v41 {padding: 0%}
+#v6 {background-image: url("../img/breadloaf.jpg");grid-area: v6;}
+#v7 {background-image: url("../img/bagels.jpg");grid-area: v7;}
 
-#v41 {
-    padding: 0%
-}
 
-/* #v5 {
-    margin: 5px;
-    background-image: url"../img/";
-    background-repeat: no-repeat;
-    background-size: cover;
-    grid-area: v5;
-    overflow: hidden;
-    border-radius: 40px;
-    border-style: solid;
-    border-color: #f6efe8;
-} */
-
-#v6 {
-    margin: 5px;
-    background-image: url("../img/breadloaf.jpg");
-    background-repeat: no-repeat;
-    background-size: cover;
-    grid-area: v6;
-    overflow: hidden;
-    border-radius: 40px;
-    border-style: solid;
-    border-color: #f6efe8;
-    filter:grayscale(0.25);
-    padding: 0%;
-}
-
-#v7 {
-    margin: 5px;
-    background-image: url("../img/bagels.jpg");
-    background-repeat: no-repeat;
-    background-size: cover;
-    grid-area: v7;
-    overflow: hidden;
-    border-radius: 40px;
-    border-style: solid;
-    border-color: #f6efe8;
-    filter:grayscale(0.4);
-    padding: 0%;
-}
-/*
-#v8 {
-    margin: 5px;
-    background-image: url("../img/bröd1.png");
-    background-repeat: no-repeat;
-    background-size: cover;
-    grid-area: v8;
-    overflow: hidden;
-    border-radius: 40px;
-    border-style: solid;
-    border-color: #f6efe8;
-    filter:grayscale(0.25);
-}
-*/
 
 /*css till meny här under*/
 .menywrapper {
     display: grid;
     background-color: #a5b58d;
-    height: 98vh;
-    width: 100%;
+    height: 90vh;
+    width: 98%;
     margin: 0px;
     overflow-x: auto;
     gap: 1rem;
-    padding: 1rem;
+    padding: 1%;
     text-decoration: transparent;
     grid-template-columns: 1fr;
-    grid-template-rows: 1fr 1fr;
+    grid-template-rows: 1fr 1fr 0.1fr;
     grid-template-areas: 
     "1"
-    "2";
+    "2"
+    "3";
 }
 
 .menyöver {
@@ -159,6 +86,13 @@
     grid-area: 1;
 }
 
+.menyunder {
+    display: flex;
+    justify-content: space-evenly;
+    flex-basis: auto;
+    grid-area: 2;
+}
+
 .card:hover {
     transform: scale(1.1);
     z-index: 10;
@@ -166,18 +100,34 @@
 }
 
 .card {
-    min-width: 200px;
+    position: relative;
     height: 80%;
+    flex-grow: 1;
+    flex-basis: 0;
     background: #b58b63;
     display: flex;
     justify-content: center;
     align-items: center;
-    scroll-snap-align: start;
     margin: 5px;
     background-repeat: no-repeat;
     background-size: cover;
     transition: transform 0.3s ease;
     border: 2px solid #f6efe8;
+    background-image: var(--bg);
+}
+
+.veganskt {
+    border: 4px solid #b58b63;
+}
+
+.badge {
+    position: absolute;
+    top: 10px;
+    left: 50%;
+    transform: translateX(-50%);
+    font-size: 1.8rem;
+    text-shadow: 0 2px 6px rgba(0,0,0,0.6);
+    color:#f6efe8;
 }
 
 .card-text {
@@ -193,27 +143,47 @@
 }
 
 #m1 { 
-    background-image: url("/img/our\ vision.jpg"); 
-    flex-grow: 1;
+    --bg: url("/img/our\ vision.jpg");
     color: #f6efe8;
     font-size: 1.3rem;
-    max-width: 20%;
     text-shadow: 0 2px 6px rgba(0,0,0,0.6);
 }
 
-#m2 { background-image: url("/img/västerbottenpaj.jpg"); flex-grow: 1;}
-#m3 { background-image: url("/img/lemonade.jpg"); flex-grow: 1;}
-#m4 { background-image: url("/img/vegan_alternative.jpg"); flex-grow: 1;}
-#m5 { background-image: url("/img/vegan_bowl.jpg"); flex-grow: 1;}
+#m2 { --bg: url("/img/västerbottenpaj.jpg")}
+#m3 { --bg: url("/img/lemonade.jpg")}
+#m4 { --bg: url("/img/vegan_alternative.jpg")}
+#m5 { --bg: url("/img/vegan_bowl.jpg")}
 
-.menyunder {
+#m6 { --bg: url("/img/cupcake.jpg")}
+#m7 { --bg: url("/img/tiramisu.jpg")}
+#m8 { --bg: url("/img/toast.jpg")}
+#m9 { --bg: url("/img/coffee.jpg")}
+#m10 { --bg: url("/img/vegan_cake.jpg" )}
+
+.infopage {
     display: flex;
+    position: absolute;
+    top: 90%;
+    left: 50%;
+    transform: translate(-50%, -50%);
     justify-content: space-evenly;
     flex-basis: auto;
-    grid-area: 2;
+    grid-area: 3;
+    height: 5%;
+    width: 20%;
 }
-#m6 { background-image: url("/img/cupcake.jpg"); flex-grow: 1;}
-#m7 { background-image: url("/img/tiramisu.jpg"); flex-grow: 1;}
-#m8 { background-image: url("/img/toast.jpg"); flex-grow: 1;}
-#m9 { background-image: url("/img/coffee.jpg"); flex-grow: 1;}
-#m10 { background-image: url("/img/vegan_cake.jpg" ); flex-grow: 1;}
+
+.infocard {
+    background-color: #b58b63;
+    flex-grow: 1;
+    flex-basis: 0;
+    justify-content: center;
+    text-align: center;
+    margin: 5px;
+    margin-top: 0;
+    border: 2px solid #f6efe8;
+}
+
+
+
+/*css till om oss sidan nedanför*/
