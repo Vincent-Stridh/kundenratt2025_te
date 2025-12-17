@@ -91,9 +91,9 @@
     grid-template-rows: 10% 1fr 1fr 0.1fr;
     grid-template-areas: 
     "menyheader"
-    "1"
-    "2"
-    "3";
+    "over"
+    "under"
+    "info";
 }
 
 #menyheader {
@@ -111,7 +111,6 @@
     width: 100%;
     overflow: hidden;
     border: solid #f6efe8;
-    padding: 0;
     grid-template-columns: 1fr 1fr 1fr;
     grid-template-areas: 
     "home meny about_us"
@@ -121,14 +120,14 @@
     display: flex;
     justify-content: space-evenly;
     flex-basis: auto;
-    grid-area: 1;
+    grid-area: over;
 }
 
 .menyunder {
     display: flex;
     justify-content: space-evenly;
     flex-basis: auto;
-    grid-area: 2;
+    grid-area: under;
 }
 
 .card:hover {
@@ -200,7 +199,7 @@
     transform: translate(-50%, -50%);
     justify-content: space-evenly;
     flex-basis: auto;
-    grid-area: 3;
+    grid-area: info;
     height: 5%;
     width: 20%;
 }
@@ -232,7 +231,7 @@
     grid-template-columns: 1fr 1fr;
     grid-template-rows: 10% 2fr 1fr 1fr;
     grid-template-areas: 
-    "header header"
+    "1 1"
     "vision vision"
     "karta personal"
     "tider formulär";
