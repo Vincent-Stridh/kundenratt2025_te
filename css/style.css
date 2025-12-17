@@ -46,7 +46,6 @@
     text-shadow: 0 2px 6px rgba(0,0,0,0.5);
 }
 
-
 #header {
     display: grid;
     text-align: center;
@@ -89,12 +88,33 @@
     padding: 1%;
     text-decoration: transparent;
     grid-template-columns: 1fr;
-    grid-template-rows: 1fr 1fr 0.1fr;
+    grid-template-rows: 10% 1fr 1fr 0.1fr;
     grid-template-areas: 
-    "m"
+    "menyheader"
     "1"
     "2"
     "3";
+}
+
+#menyheader {
+    display: grid;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    background-color: #b58b63;
+    margin-top: 0;
+    grid-area: menyheader;
+    border: solid #f6efe8;
+    color: #f6efe8;
+    font-size: 1.6rem;
+    text-shadow: 0 2px 6px rgba(0,0,0,0.5);
+    width: 100%;
+    overflow: hidden;
+    border: solid #f6efe8;
+    padding: 0;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-areas: 
+    "home meny about_us"
 }
 
 .menyöver {
