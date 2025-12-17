@@ -232,7 +232,7 @@
     grid-template-columns: 1fr 1fr;
     grid-template-rows: 10% 2fr 1fr 1fr;
     grid-template-areas: 
-    "1 1"
+    "header header"
     "vision vision"
     "karta personal"
     "tider formulär";
