@@ -11,7 +11,7 @@
     grid-template-columns: repeat(2, 1fr);
     grid-template-rows: 10% 10% 1fr 1fr 1fr;
     grid-template-areas: 
-    "m v2"
+    "header header"
     "v3 v4"
     "v3 v6"
     "v3 v6"
@@ -47,11 +47,21 @@
 }
 
 
-#meny {grid-area: m}
-#about_us {grid-area: v2}
-
-#v3 {background-image: url("../img/coffee-shop-desk.jpg"); grid-area: v3;
+#header {
+    display: grid;
+    text-align: center;
+    width: 100%;
+    margin-top: 0;
+    grid-area: header;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-areas: 
+    "home meny about_us";
 }
+#home{grid-area: home;}
+#meny{grid-area: meny;}
+#about_us{grid-area: about_us;}
+
+#v3 {background-image: url("../img/coffee-shop-desk.jpg"); grid-area: v3;}
 
 #v4 {
     display:flex;  
@@ -81,6 +91,7 @@
     grid-template-columns: 1fr;
     grid-template-rows: 1fr 1fr 0.1fr;
     grid-template-areas: 
+    "m"
     "1"
     "2"
     "3";
@@ -150,7 +161,7 @@
 }
 
 #m1 { --bg: url("/img/spaghettibolognese.jpg")}
-#m2 { --bg: url("/img/västerbottenpaj.jpg")}
+#m2 { --bg: url("/img/vasterbottenpaj.jpg")}
 #m3 { --bg: url("/img/lemonade.jpg")}
 #m4 { --bg: url("/img/vegan_alternative.jpg")}
 #m5 { --bg: url("/img/vegan_bowl.jpg")}
@@ -193,14 +204,15 @@
     background-color: #f6efe8;
     height: 90vh;
     width: 98%;
-    margin: 5px;
+    margin: 0px;
     overflow-x: auto;
     gap: 2rem;
     padding: 1%;
     text-decoration: transparent;
     grid-template-columns: 1fr 1fr;
-    grid-template-rows: 2fr 1fr 1fr;
+    grid-template-rows: 10% 2fr 1fr 1fr;
     grid-template-areas: 
+    "1 1"
     "vision vision"
     "karta personal"
     "tider formulär";
@@ -233,17 +245,19 @@
 }
 
 .picture {background-repeat: no-repeat; background-size: cover; background-image: var(--bg);}
-.omossbildtext {
+.omossbrödtext {
     color: #f6efe8; 
     font-size: 1.3rem; 
     text-shadow: 0 2px 6px rgba(0,0,0,0.9);
     text-align: center;
     line-height: 1.6;
-    margin-top: 1rem;
+    margin: 0.15rem;
 }
 
-#vision{grid-area: vision; position: relative; --bg: url("../img/our vision.jpg")}
-#karta {grid-area: karta; position: relative; --bg: url("../img/")}
+#personal_och_ägare .omossbrödtext {padding-top: 0.5rem}
+
+#vision{grid-area: vision; position: relative; --bg: url("../img/our_vision.jpg")}
+#karta {grid-area: karta; position: relative; --bg: url("../img/map.jpg")}
 #personal_och_ägare {grid-area:personal; position: relative}
 #öppettider{grid-area: tider; position: relative}
 #kontaktformulär{grid-area: formulär; position: relative}
