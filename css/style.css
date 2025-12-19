@@ -4,9 +4,6 @@
     background-color: #b58b63;
     height: 90vh;
     width: 100%;
-    margin-top: 0;
-    margin-right: 0;
-    margin-left: 0;
     margin: 0;
     grid-template-columns: repeat(2, 1fr);
     grid-template-rows: 10% 10% 1fr 1fr 1fr;
@@ -81,11 +78,10 @@
     display: grid;
     background-color: #a5b58d;
     height: 90vh;
-    width: 98%;
-    margin: 0px;
-    overflow-x: auto;
-    gap: 1rem;
-    padding: 1%;
+    width: 100%;
+    padding: 0;
+    margin: 0;
+    overflow-x: hidden;
     text-decoration: transparent;
     grid-template-columns: 1fr;
     grid-template-rows: 10% 1fr 1fr 0.1fr;
@@ -109,6 +105,11 @@
     "home meny about_us"
 }
 
+.menytopbox,
+.omosstopbox {
+    height: 100%;
+}
+
 .menytopbox {
     display: flex;
     overflow: hidden;
@@ -122,6 +123,7 @@
 
 .menyöver {
     display: flex;
+    margin: 5px;
     justify-content: space-evenly;
     flex-basis: auto;
     grid-area: over;
@@ -129,6 +131,7 @@
 
 .menyunder {
     display: flex;
+    margin: 5px;
     justify-content: space-evenly;
     flex-basis: auto;
     grid-area: under;
@@ -217,18 +220,16 @@
     border: 2px solid #f6efe8;
 }
 
-
-
 /*css till om oss sidan nedanför*/
 .omosswrapper {
     display: grid;
     background-color: #f6efe8;
     height: 90vh;
-    width: 98%;
-    margin: 0px;
+    width: 100%;
+    margin: 0;
     overflow-x: auto;
     gap: 2rem;
-    padding: 1%;
+    padding: 0%;
     text-decoration: transparent;
     grid-template-columns: 1fr 1fr;
     grid-template-rows: 10% 2fr 1fr 1fr;
@@ -268,10 +269,9 @@
 .omosstopbox {
     display: flex;
     overflow: hidden;
-    border: solid #f6efe8;
-    background-color: #b58b63;
+    border: solid #b58b63;
+    background-color: #a5b58d;
     text-align: center;
-    padding: 0;
     align-items: center;
     justify-content: center;
 }
@@ -282,7 +282,7 @@
     justify-content: center;
     text-align: center;
     background-color: #b58b63;
-    margin-top: 0;
+    margin: 0;
     grid-area: omossheader;
     grid-template-columns: 1fr 1fr 1fr;
     grid-template-areas: 
