@@ -108,6 +108,7 @@
 .menytopbox,
 .omosstopbox {
     height: 100%;
+    box-sizing: border-box;
 }
 
 .menytopbox {
@@ -220,7 +221,7 @@
     border: 2px solid #f6efe8;
 }
 
-/*css till om oss sidan nedanför*/
+/*css till Om Oss sidan nedanför*/
 .omosswrapper {
     display: grid;
     background-color: #f6efe8;
