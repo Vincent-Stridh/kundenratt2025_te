@@ -49,9 +49,15 @@
     width: 100%;
     margin-top: 0;
     grid-area: header;
-    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
     grid-template-areas: 
-    "home meny about_us";
+    "logo home meny about_us";
+}
+#logo{
+    grid-area: logo; 
+    background-image: url(/img/logotyp.jpg);
+    background-size: contain;
+    background-repeat: no-repeat;
 }
 #home{grid-area: home;}
 #meny{grid-area: meny;}
